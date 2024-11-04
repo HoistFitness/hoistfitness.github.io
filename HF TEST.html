@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>HF TEST
+    </title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Dependency to view 3D models -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="index.html"><img src="Hoist_Logo.png" alt="Hoist Logo" height="50px"></a>
+    </div>
+    <h1>Performance Series - Seven Element</h1>
+    <div class="content">
+      <model-viewer src="HF-5970-v1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="agx" poster="poster.webp" shadow-intensity="1" exposure="1.5" environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="138.3deg 85.29deg 5.59m" field-of-view="30deg">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+    </model-viewer>
+            <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+    </div>
+    <button onclick="document.querySelector('model-viewer').activateAR()">Preview in your room with AR</button>
+    <a href="index.html" class="button">Back to home</a>
+  </body>
+</html>
